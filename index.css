@@ -1,0 +1,70 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+body {
+ /* background-color: #FAFAFA; */
+ font-size: 14px;
+ text-align: center; 
+ display: flex;
+ justify-content: center;
+ align-items: center; 
+ position: absolute;
+ top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.findPW {
+    text-decoration: none;
+    color: #003569;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.loginBox img {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.loginBox input, .loginBox button {
+    display: flex;
+    justify-content: center;
+    width: 266px;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    color: black;
+    flex-direction: row;
+
+}
+
+.loginBox input {
+    background-color: #FAFAFA;
+    height: 36px;
+    margin: 0 40px 6px 40px;
+    cursor: text;
+    font-size: 13px;
+    padding: 9px 0 7px 8px;
+    font-size: 12px;
+}
+
+.loginBox button {
+    background-color: #3897f0;
+    opacity: 0.3;
+    color: white;
+    width: 268px;
+    height: 30px;
+    border-radius: 4px;
+    margin: 10px 40px 80px 40px;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginBox {
+    width: 348px;
+    height: 370px;
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+    margin: 0;
+    padding: 10px 0;
+}
+
