@@ -33,6 +33,7 @@ body {
     border-radius: 3px;
     color: black;
     flex-direction: row;
+    outline: none;
 
 }
 

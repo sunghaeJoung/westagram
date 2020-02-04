@@ -3,6 +3,16 @@ const feed = document.querySelector(".feed1"),
     input = feed.querySelector("input"),
     btn =  feed.querySelector(".submitBtn");
 
+let commentAr = []; 
+
+
+function deleteComment(event){
+    let btn = event.target; //삭제버튼 누른 요소
+    console.log("btn===>",btn);
+    let delParent = btn.parentNode; //btn의 부모
+    console.log("delParent===>",delParent);
+    addComment.removeChild(delParent);
+}
 
 function saveComment(text) {
     let div = document.createElement("div");
@@ -11,15 +21,30 @@ function saveComment(text) {
     //html에 이미지 넣는 방법
     let img = document.createElement("img");
     img.src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png";
+    let delBtn = document.createElement("button"); //삭제버튼 만듬
+    // let delImg = document.createElement("img");
+    // delImg.src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/more.png";
+    let newId = commentAr.length + 1;
+    delBtn.addEventListener("click", deleteComment);
     div.classList.add("comment-list");
     spanId.classList.add("comment-id");
     spanText.classList.add("comment-text");
+    delBtn.classList.add("delBtn")
     spanId.innerText = "_sunghae__";
     spanText.innerHTML = text;
+    delBtn.innerText = "del";
     div.appendChild(spanId);
     div.appendChild(spanText);
+    // delBtn.appendChild(delImg);
+    div.appendChild(delBtn);
     div.appendChild(img);
+    div.id = newId;
     addComment.appendChild(div);
+    const commentObj = {
+        text: text,
+        id: newId
+    };
+    commentAr.push(commentObj);
     console.log(addComment);
 }
 
