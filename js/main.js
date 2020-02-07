@@ -21,11 +21,15 @@ function saveComment(text) {
     //html에 이미지 넣는 방법
     let img = document.createElement("img");
     img.src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png";
-    let delBtn = document.createElement("button"); //삭제버튼 만듬
+   
+    //삭제버튼
+    let delBtn = document.createElement("button"); 
     // let delImg = document.createElement("img");
     // delImg.src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/more.png";
     let newId = commentAr.length + 1;
     delBtn.addEventListener("click", deleteComment);
+
+    //class추가
     div.classList.add("comment-list");
     spanId.classList.add("comment-id");
     spanText.classList.add("comment-text");
@@ -33,6 +37,8 @@ function saveComment(text) {
     spanId.innerText = "_sunghae__";
     spanText.innerHTML = text;
     delBtn.innerText = "del";
+
+    //부모에 넣기
     div.appendChild(spanId);
     div.appendChild(spanText);
     // delBtn.appendChild(delImg);
