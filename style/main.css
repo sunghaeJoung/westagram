@@ -144,6 +144,8 @@ nav {
 
 .user-info-img {
     border-radius: 50%;
+    width: 50px;
+    /* height: 50px; */
 }
 
 .user-info {
@@ -318,6 +320,16 @@ nav {
     padding: 8px;
 }
 
+.main-image img {
+    width: 600px;
+    height: 600px;
+}
+
+.feed-menu img {
+    width: 24px;
+    height: 24px;
+}
+
 .feed-menu {
     padding: 8px;
     cursor: pointer;
@@ -381,11 +393,19 @@ nav {
     margin: 0 145px;
 }
 
+.link-left img {
+    width: 24px;
+}
+
 .link-left{
     display: flex;
     cursor: pointer;
 }
 
+.link-left .logo_img img {
+    width: 103px;
+    height: 29px; 
+}
 
 .slash {
     width: 1px;
